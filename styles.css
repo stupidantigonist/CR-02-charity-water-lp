@@ -2,7 +2,7 @@
 
 Primary Colors:
 - Yellow:     #FFC907
-- Blue:       #2E9DF7
+- Blue:       #003366
 
 Secondary Colors:
 - Light Blue: #8BD1CB
@@ -36,7 +36,7 @@ body {
 section {
   background: #fff; /* White background for sections */
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.07); /* Soft blue shadow */
   margin: 24px 10px; /* Space between sections */
   padding: 24px 16px;
 }
@@ -55,7 +55,7 @@ section {
 /* Left side with video */
 .hero-video {
   position: relative; /* For positioning the video */
-  width: 80%; /* Takes up 80% of the page as requested */
+  width: 70%; /* Takes up 70% of the page now */
   overflow: hidden; /* Hide overflow */
 }
 
@@ -91,11 +91,14 @@ section {
 
 /* Right side content */
 .hero-content {
-  width: 20%; /* Takes remaining space */
+  width: 30%; /* Takes remaining space now */
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Vertical centering */
+  align-items: center;     /* Horizontal centering */
+  text-align: center;      /* Center the text inside */
+  background-color: #FFC907; /* Right-side yellow background */
 }
 
 /* Make the headline bold and modern */
@@ -104,15 +107,38 @@ section {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  color: #222;
+  color: #003366;
 }
 
 /* Style the subheadline */
 .hero p {
   font-size: 1.2em;
   margin-top: 0;
-  color: #666;
+  color: #003366;
   line-height: 1.6;
+}
+
+/* Hero donate button */
+.hero-donate-button {
+  display: inline-block;
+  background-color: #003366;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+}
+
+.hero-donate-button:hover {
+  background-color: #fff;
+  color: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.3);
 }
 
 /* Right-side typography overrides */
@@ -127,13 +153,14 @@ section {
   font-weight: 700; /* Bold */
   font-size: 2.2em; /* Slightly smaller than global hero h1 to fit the narrow column */
   margin: 0 0 8px 0;
+  color: #003366; /* Right-side text navy */
 }
 
 .right-p {
   /* Use Nunito (Google Font) for paragraphs */
   font-family: 'Nunito', 'Avenir', 'Proxima Nova', Arial, sans-serif;
   font-weight: 400; /* Normal */
-  color: #666;
+  color: #003366;
   font-size: 1em;
   margin: 0 0 12px 0;
   line-height: 1.5;
@@ -149,7 +176,7 @@ section {
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #003366; /* Primary navy */
   margin-top: 0;
   font-weight: bold;
 }
@@ -168,7 +195,7 @@ h2 {
   max-width: 320px;
   border-radius: 10px;
   margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.10);
 }
 
 /* Donate Button Styles */
