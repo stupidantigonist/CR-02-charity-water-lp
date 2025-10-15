@@ -37,28 +37,29 @@ body {
 /* Logo styles */
 .top-logo {
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 20px;
   z-index: 10;
 }
 
-.bottom-logo {
+/* When .bottom-logo is inside .hero-video, it will be positioned relative to that container */
+.hero-video .bottom-logo {
   position: absolute;
-  bottom: 20px;
-  left: 5%;
-  z-index: 10;
+  bottom: 5px;
+  left: 5px;
+  z-index: 20;
 }
 
 /* Bottom logo specific styles */
 .bottom-logo img {
-  height: 40px;
+  height: 12px; /* Much smaller size */
   width: auto;
   display: block;
 }
 
 /* Top logo specific styles */
 .top-logo img {
-  height: 200px; /* Approximately 1 inch */
+  height: 96px; /* Approximately 1 inch */
   width: auto;
   display: block;
 }
