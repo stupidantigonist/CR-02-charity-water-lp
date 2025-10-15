@@ -45,21 +45,21 @@ body {
 /* When .bottom-logo is inside .hero-video, it will be positioned relative to that container */
 .hero-video .bottom-logo {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2px;
+  left: 2px;
   z-index: 20;
 }
 
 /* Bottom logo specific styles */
 .bottom-logo img {
-  height: 12px; /* Much smaller size */
+  height: 48px; /* Half inch */
   width: auto;
   display: block;
 }
 
 /* Top logo specific styles */
 .top-logo img {
-  height: 96px; /* Approximately 1 inch */
+  height: 140px; /* Slightly bigger */
   width: auto;
   display: block;
 }
@@ -198,19 +198,107 @@ section {
   line-height: 1.5;
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
+/* Process Section Styles */
+.process {
+  background-color: #fff;
   color: #222;
+  padding: 60px 40px;
+}
+
+.process h2 {
   text-align: center;
-  padding: 30px 20px;
+  margin-bottom: 40px;
+}
+
+.process-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left side with numbered points */
+.process-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.step-number {
+  background-color: #003366;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #003366;
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+}
+
+.step-content p {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #444;
+}
+
+/* Right side with photos */
+.process-photos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.photo {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+  transform: scale(1.05);
 }
 
 /* Add accent color to section headings */
 h2 {
   color: #003366; /* Primary navy */
   margin-top: 0;
-  font-weight: bold;
+  font-family: 'Poppins', 'Proxima Nova', 'Avenir', Arial, sans-serif; /* Match h1 font */
+  font-weight: 700; /* Match h1 bold weight */
+  font-size: 2.2em; /* Similar size to h1 */
+  letter-spacing: 1px; /* Match h1 letter spacing */
 }
 
 /* Call-to-Action Section Styles */
