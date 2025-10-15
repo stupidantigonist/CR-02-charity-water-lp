@@ -26,7 +26,7 @@ Fonts:
 /* Set up the main font and background color for the whole page */
 body {
   background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Nunito', 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
@@ -64,19 +64,22 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Cover the entire area */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hero-video img:hover {
+  opacity: 0.9; /* Slight dim effect on hover */
 }
 
 /* Video container */
 .video-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%; /* Video takes up 80% of the image area */
-  height: 80%;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of parent */
+  height: 100%; /* Full height of parent */
+  background: #000;
 }
 
 /* Video element */
@@ -110,6 +113,30 @@ section {
   margin-top: 0;
   color: #666;
   line-height: 1.6;
+}
+
+/* Right-side typography overrides */
+/*
+  Note: Proxima Nova is a commercial font and isn't available on Google Fonts.
+  The rules below use font-family fallbacks. To use Proxima Nova and Avenir
+  exactly, add local font-face declarations or host them via a webfont service.
+*/
+.right-h1 {
+  /* Use Poppins (Google Font) for heading */
+  font-family: 'Poppins', 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 2.2em; /* Slightly smaller than global hero h1 to fit the narrow column */
+  margin: 0 0 8px 0;
+}
+
+.right-p {
+  /* Use Nunito (Google Font) for paragraphs */
+  font-family: 'Nunito', 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-weight: 400; /* Normal */
+  color: #666;
+  font-size: 1em;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
 }
 
 /* Story Section Styles */

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
+    <!-- Google Fonts: Poppins for headings, Nunito for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,19 +13,58 @@
     <section class="hero">
         <!-- Left side with video -->
         <div class="hero-video">
-            <img src="img/water-bg.jpg" alt="Clean water initiative">
-            <div class="video-container">
-                <!-- Video element for MP4 file -->
-                <video controls>
-                    <source src="video/your-video.mp4" type="video/mp4">
+            <!-- Hero image that acts as video thumbnail -->
+            <img src="img/hero_img.png" alt="Clean water initiative" class="hero-img" id="heroImage">
+            <div class="video-container" id="videoContainer">
+                <!-- Video element for MP4 file - removed controls as we'll control it with JavaScript -->
+                <video id="heroVideo">
+                    <source src="video/why_water (1080p)-sound.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
+        
+        <!-- Add JavaScript for video/image interaction -->
+        <script>
+            // Get our elements
+            const heroImage = document.getElementById('heroImage');
+            const videoContainer = document.getElementById('videoContainer');
+            const heroVideo = document.getElementById('heroVideo');
+
+            // Initially hide the video container
+            videoContainer.style.display = 'none';
+
+            // Add click handler to the image
+            heroImage.addEventListener('click', function() {
+                // Hide the image
+                heroImage.style.display = 'none';
+                // Show the video
+                videoContainer.style.display = 'block';
+                // Play the video
+                heroVideo.play();
+            });
+
+            // When video ends
+            heroVideo.addEventListener('ended', function() {
+                // Hide the video
+                videoContainer.style.display = 'none';
+                // Show the image
+                heroImage.style.display = 'block';
+            });
+
+            // When video is paused
+            heroVideo.addEventListener('pause', function() {
+                // Hide the video
+                videoContainer.style.display = 'none';
+                // Show the image
+                heroImage.style.display = 'block';
+            });
+        </script>
         <!-- Right side with content -->
         <div class="hero-content">
-            <h1>Safe Water Creates Communities</h1>
-            <p>You don't just provide water, you provide for healthier communities, education, and women's livelihoods.</p>
+            <h1 class="right-h1">Safe Water Creates Communities</h1>
+            <p class="right-p">You don't just provide water, you provide for healthier communities, education, and women's livelihoods.</p>
+            <p class="right-p">Click the image to the left to learn more.</p>
         </div>
     </section>
 
