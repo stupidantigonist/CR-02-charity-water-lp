@@ -30,6 +30,37 @@ body {
   margin: 0;
   padding: 0;
   color: #222;
+  position: relative; /* For absolute positioning of logos */
+  min-height: 100vh; /* Ensure full viewport height for logo positioning */
+}
+
+/* Logo styles */
+.top-logo {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  z-index: 10;
+}
+
+.bottom-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  z-index: 10;
+}
+
+/* Bottom logo specific styles */
+.bottom-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Top logo specific styles */
+.top-logo img {
+  height: 200px; /* Approximately 1 inch */
+  width: auto;
+  display: block;
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
