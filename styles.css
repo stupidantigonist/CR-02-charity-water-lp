@@ -360,6 +360,86 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 51, 102, 0.10);
 }
 
+/* Impact story heading centered and in brand yellow */
+.impact-story h2 {
+  text-align: center;
+  color: #FFC907;
+}
+
+/* Ensure impact media appears above the text and both are centered */
+.impact-content {
+  display: flex;
+  flex-direction: column; /* stack vertically: media above text */
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Prev/Next buttons for impact stories */
+.impact-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 12px auto 0 auto;
+}
+
+.impact-button {
+  background: #003366;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.impact-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Impact media wrapper (videos/images) */
+.impact-media {
+  display: flex;
+  justify-content: center; /* center media horizontally */
+  align-items: center;
+  flex-direction: column; /* stack media and caption vertically */
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.impact-media-item {
+  width: 100%;
+  max-width: 860px; /* larger media width for impact section */
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.impact-media video {
+  width: 100%;
+  height: auto;
+}
+
+/* Center caption text under media */
+#impactText {
+  text-align: center;
+  max-width: 900px;
+  margin: 12px auto 0 auto;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 800px) {
+  .impact-media-item {
+    max-width: 100%;
+  }
+  #impactText {
+    font-size: 0.95rem;
+  }
+}
+
 /* Donate Button Styles */
 .donate-button {
   display: inline-block;
