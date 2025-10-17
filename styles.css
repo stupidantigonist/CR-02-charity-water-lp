@@ -212,23 +212,29 @@ section {
 
 .process-container {
   display: flex;
-  gap: 40px;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Left side with numbered points */
-.process-steps {
-  flex: 1;
+/* Each process row: step on the left, photo on the right */
+.process-row {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  gap: 24px;
 }
 
-.step {
+.process-row .step {
+  flex: 1; /* left column */
   display: flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+.process-row .photo {
+  width: 45%; /* right column */
+  flex-shrink: 0;
 }
 
 .step-number {
