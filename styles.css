@@ -411,7 +411,7 @@ h2 {
 
 .impact-media-item {
   width: 100%;
-  max-width: 860px; /* larger media width for impact section */
+  max-width: 900px; /* larger media width for impact section */
   display: block;
   margin: 0 auto;
   border-radius: 10px;
